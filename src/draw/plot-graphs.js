@@ -133,7 +133,6 @@ function cw_listTopScores(elem, state) {
 
   for (var k = 0; k < Math.min(10, cw_topScores.length); k++) {
     var topScore = cw_topScores[k];
-    // console.log(topScore);
     var n = "#" + (k + 1) + ":";
     var score = Math.round(topScore.v * 100) / 100;
     var distance = "d:" + Math.round(topScore.x * 100) / 100;

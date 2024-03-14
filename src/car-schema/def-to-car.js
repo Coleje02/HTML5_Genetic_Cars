@@ -6,6 +6,10 @@ var createInstance = require("../machine-learning/create-instance");
 
 module.exports = defToCar;
 
+ function getRandomInt(max) {
+   return Math.floor(Math.random() * max);
+ }
+
 function defToCar(normal_def, world, constants){
   var car_def = createInstance.applyTypes(constants.schema, normal_def)
   var instance = {};
@@ -14,7 +18,7 @@ function defToCar(normal_def, world, constants){
   );
   var i;
 
-  var wheelCount = car_def.wheel_radius.length;
+  var wheelCount = getRandomInt(3)+2
 
   instance.wheels = [];
   for (i = 0; i < wheelCount; i++) {
